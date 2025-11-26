@@ -1,0 +1,89 @@
+/* Responsive rules for PawMatch - mobile first */
+
+/* Base layout adjustments */
+:root{
+	--container-max: 1100px;
+	--gap: 1rem;
+}
+
+/* Make main container fluid on small screens */
+.container{
+	width: 100%;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+/* Thumbnails and galleries */
+.thumb{
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+
+.gallery{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+}
+
+/* Forms should stretch and stack nicely */
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select{
+	width:100%;
+	box-sizing:border-box;
+	padding:0.6rem;
+	margin-bottom:0.6rem;
+}
+
+/* Navigation responsiveness */
+.nav-right{
+	display:flex;
+	gap:0.5rem;
+	flex-wrap:wrap;
+}
+
+/* Animal list/grid */
+.animals-grid{
+	display:grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 1rem;
+}
+
+/* Slideshow images should be responsive */
+.slideshow img{
+	width:100%;
+	height:auto;
+	object-fit:cover;
+}
+
+/* Story cards */
+.story-card{
+	display:flex;
+	flex-direction:column;
+	gap:0.5rem;
+}
+
+/* Small screens done; medium and above */
+@media(min-width:640px){
+	.gallery{ grid-template-columns: repeat(3, 1fr); }
+	.animals-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(min-width:900px){
+	.container{ max-width: var(--container-max); }
+	.gallery{ grid-template-columns: repeat(4, 1fr); }
+	.animals-grid{ grid-template-columns: repeat(3, 1fr); }
+	.nav-right{ gap:1rem; }
+	/* Make story cards align horizontally where appropriate */
+	.story-card.row{ flex-direction:row; align-items:flex-start; }
+}
+
+/* Utility tweaks */
+.text-center{ text-align:center; }
+.muted{ color:#666; font-size:0.95rem; }
+
+/* Accessibility: ensure focus outlines remain visible */
+:focus{ outline: 3px solid rgba(21,156,228,0.35); outline-offset:2px; }

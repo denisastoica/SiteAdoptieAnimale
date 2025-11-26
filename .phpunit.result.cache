@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"AdoptionTest::testAdoptionDefaultStatus":0.005,"AnimalTest::testCreateAnimal":0.009,"AnimalTest::testHasCorrectProperties":0.001,"LocationTest::testAllMethodExists":0.001,"SpeciesTest::testSpeciesClassExists":0,"UserTest::testPasswordHashing":0.095}}
