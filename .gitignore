@@ -1,0 +1,5 @@
+/vendor/
+/public/uploads/
+/config/database.php
+/.idea/
+/.vscode/
